@@ -15,10 +15,4 @@ function LunchCheckController($scope,
   };
 }
 
-function AnnonateMe(name, job, blah) {
-  return "Blah!";
-}
-
-console.log(DIController.toString());
-
 })();
