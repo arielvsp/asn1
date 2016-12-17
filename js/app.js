@@ -1,20 +1,18 @@
 (function () {
 'use strict';
 
-angular.module('DIApp', [])
-.controller('DIController', DIController);
+angular.module('LunchCheck', [])
+.controller('LunchCheckController', LunchCheckController);
 
-function DIController ($scope,
+function LunchCheckController($scope,
                        $filter,
                        $injector) {
-  $scope.name = "Yaakov";
+  $scope.dishes = "";
 
   $scope.upper = function () {
     var upCase = $filter('uppercase');
     $scope.name = upCase($scope.name);
   };
-
-  console.log($injector.annotate(DIController));
 }
 
 function AnnonateMe(name, job, blah) {
