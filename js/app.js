@@ -11,7 +11,7 @@ function LunchCheckController($scope) {
 
   $scope.checkIfTooMuch = function () {
 
-  if(!$scope.dishes) {
+  if($scope.dishes.split(",").length == 0) {
 	$scope.showMessage = "Please enter data first";
   } else if($scope.dishes.split(",").length <= 3) {
 		$scope.tooMuch  = false;
