@@ -8,7 +8,7 @@ LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.dishes = "";
   $scope.tooMuch  = false;
-  $scope.showThisMsg = "";
+  $scope.showThisMsg = "Blablabla";
 
   $scope.checkIfTooMuch = function () {
 
