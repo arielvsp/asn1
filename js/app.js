@@ -8,10 +8,14 @@ function LunchCheckController($scope,
                        $filter,
                        $injector) {
   $scope.dishes = "";
+  $scope.tooMuch  = false;
 
-  $scope.upper = function () {
-    var upCase = $filter('uppercase');
-    $scope.name = upCase($scope.name);
+  $scope.checkIfTooMuch() = function () {
+	
+    if($scope.dishes.split(",").length <= 3)
+		$scope.tooMuch  = false;
+	else
+		$scope.tooMuch  = true;
   };
 }
 
