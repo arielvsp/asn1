@@ -4,18 +4,17 @@
 angular.module('LunchCheck', [])
 .controller('LunchCheckController', LunchCheckController);
 
-function LunchCheckController($scope,
-                       $filter,
-                       $injector) {
+LunchCheckController.$inject = ['$scope'];
+function LunchCheckController($scope) {
   $scope.dishes = "";
   $scope.tooMuch  = false;
 
-  $scope.checkIfTooMuch() = function () {
-	
-    if($scope.dishes.split(",").length <= 3)
+  $scope.checkIfTooMuch = function () {
+    if($scope.dishes.split(",").length <= 3) {
 		$scope.tooMuch  = false;
-	else
+	} else {
 		$scope.tooMuch  = true;
+	}
   };
 }
 
