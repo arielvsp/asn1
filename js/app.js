@@ -12,13 +12,13 @@ function LunchCheckController($scope) {
   $scope.checkIfTooMuch = function () {
 
   if($scope.dishes.split(",").length == 0) {
-	$scope.showMessage = "Please enter data first";
+	$scope.showThisMsg = "Please enter data first";
   } else if($scope.dishes.split(",").length <= 3) {
 		$scope.tooMuch  = false;
-		$scope.showMessage = "Please enter data first";
+		$scope.showThisMsg = "Please enter data first";
 	} else {
 		$scope.tooMuch  = true;
-		$scope.showMessage = "Please enter data first";
+		$scope.showThisMsg = "Please enter data first";
 	}
   };
 }
